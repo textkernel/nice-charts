@@ -2,7 +2,7 @@
     "name": "nice-charts",
     "version": "1.0.0",
     "description": "D3 Charts library for Nice!",
-    "main": "index.js",
+    "main": "./lib/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -10,7 +10,7 @@
         "type": "git",
         "url": "git@tkgit-01.textkernel.net:nice/nice-charts.git"
     },
-    "author": "Textkernel B.V.",
+    "author": "Nice! Circle, Textkernel B.V.",
     "license": "ISC",
     "dependencies": {
         "d3": "4.4.0",
