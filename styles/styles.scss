@@ -17,9 +17,9 @@
 
 $fonts-primary: 'Open Sans', sans-serif;
 
-$color-primary: '#F18700';
-$color-brand: '#009CC1';
-$color-border: '#D0D1D5';
+$color-primary: #F18700;
+$color-brand:   #009CC1;
+$color-border:  #D0D1D5;
 
 .nc-overlay {
     position: absolute;
@@ -98,259 +98,219 @@ $color-border: '#D0D1D5';
         margin-left: -5px;
     }
 }
+.nc-chart {
+    position: relative;
+    margin: 0 5px;
+    padding: .1em 10px;
+    box-sizing: border-box;
+    
+    canvas {
+        display: block;
+        width: 100%;
+        visibility: hidden;
+    }
 
-#heading {
-    margin-bottom: 10px;
-    h2 {
-        .btn {
-            font-size: 12px;
+    .nc-pie-icon-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -30px 0 0 -40px;
+        text-align: center;
+        height: 60px;
+        width: 80px;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        .nc-pie-icon {
+            font-size: 2em;
+            color: $color-border;
+        }
+        &.nc-pie-icon-hidden {
+            display: none;
         }
     }
-}
-.nc-inner {
-    box-sizing: border-box;
+    .nc-tooltip {
+        line-height: 16px;
+        width: 100px;
+        margin: -15px 0 0 -50px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: $fonts-primary;
+        font-size: 1.1em;
+        white-space: no-wrap;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
 
-    .nc-chart-widget {
-        page-break-inside: avoid;
-        width: 50%;
-        min-height: 125px;
-        float: left;
-        margin: 0 0 15px 0;
-        position: relative;
-
-        &.nc-cols-2 {
-            width: 100%;
-        }
-
-        h3 {
-            font-size: 1.4em;
-            padding: 0 15px 5px 15px;
-            margin: 0 0 5px;
+        .nc-tooltip-label {
+            display: block;
+            width: inherit;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             font-weight: 600;
-            border-bottom: 1px solid $color-border;
+            overflow: hidden;
         }
-        .nc-description {
-            font-family: $fonts-primary;
-            font-size: 1.15em;
-            padding: 0 15px;
-            margin: 0;
-            color: $nc-description;
+        .nc-tooltip-value {
+
         }
-        .nc-chart {
-            position: relative;
-            margin: 0 5px;
-            padding: .1em 10px;
-            box-sizing: border-box;
-            
-            canvas {
-                display: block;
-                width: 100%;
-                visibility: hidden;
+    }
+    .nc-chart-svg {
+        position: absolute;
+        top: 10px;
+        width: calc(100% - 25px);
+
+        .nc-legend {
+            .nc-legend-sample {
+                shape-rendering: geometricPrecision;
             }
-
-            .nc-pie-icon-container {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin: -30px 0 0 -40px;
-                text-align: center;
-                height: 60px;
-                width: 80px;
-                display: block;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-
-                .nc-pie-icon {
-                    font-size: 2em;
-                    color: $nc-gray;
-                }
-                &.nc-pie-icon-hidden {
-                    display: none;
+            rect {
+                &.nc-legend-sample {
+                    shape-rendering: crispEdges;
                 }
             }
-            .nc-tooltip {
-                line-height: 16px;
-                width: 100px;
-                margin: -15px 0 0 -50px;
-                text-align: center;
-                position: absolute;
-                top: 50%;
-                left: 50%;
+            .nc-legend-label {
+                fill: #000;
+                font-size: 11px;
                 font-family: $fonts-primary;
-                font-size: 1.1em;
-                white-space: no-wrap;
-                display: block;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-
-                .nc-tooltip-label {
-                    display: block;
-                    width: inherit;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    font-weight: 600;
-                    overflow: hidden;
-                }
-                .nc-tooltip-value {
-
-                }
             }
-            .nc-chart-svg {
-                position: absolute;
-                top: 10px;
-                width: calc(100% - 25px);
+        }
+        .nc-line {
+            fill: none;
+            stroke: $color-brand;
+            stroke-width: 2px;
+        }
+        .nc-line-dot {
+            fill: white;
+            stroke-width: 2;
+            stroke: $color-brand;
+            shape-rendering: geometricPrecision;
+            transition: r 0.2s;
 
-                .nc-legend {
-                    .nc-legend-sample {
-                        shape-rendering: geometricPrecision;
-                    }
-                    rect {
-                        &.nc-legend-sample {
-                            shape-rendering: crispEdges;
-                        }
-                    }
-                    .nc-legend-label {
-                        fill: #000;
-                        font-size: 11px;
-                        font-family: $fonts-primary;
-                    }
-                }
-                .nc-line {
-                    fill: none;
-                    stroke: $nc-blue;
-                    stroke-width: 2px;
-                }
-                .nc-line-dot {
-                    fill: white;
-                    stroke-width: 2;
-                    stroke: $nc-blue;
-                    shape-rendering: geometricPrecision;
-                    transition: r 0.2s;
+            &:hover {
+                r: 5;
+                fill: white;
+                stroke: $color-primary;
+                stroke-width: 3;
+            }
+        }
+        .nc-grid {
+            line {
+                stroke: lightgrey;
+                stroke-opacity: 0.7;
+                shape-rendering: crispEdges;
+            }
+            path {
+                stroke-width: 0;
+            }
+        }
+        .nc-area {
+            fill: rgba($color-brand, .15);
+        }
+        .nc-bar {
+            shape-rendering: crispEdges;
+            transition: fill 0.2s;
 
-                    &:hover {
-                        r: 5;
-                        fill: white;
-                        stroke: $color-primary;
-                        stroke-width: 3;
-                    }
-                }
-                .nc-grid {
-                    line {
-                        stroke: lightgrey;
-                        stroke-opacity: 0.7;
-                        shape-rendering: crispEdges;
-                    }
-                    path {
-                        stroke-width: 0;
-                    }
-                }
-                .nc-area {
-                    fill: rgba($color-brand, .15);
+            &.table {
+                fill: rgba($color-brand, .25);
+            }
+            &.histogram {
+                fill: $color-brand;
+            }
+            &:hover {
+                fill: $color-primary;
+            }
+        }
+        .nc-bar-group {
+            &:hover {
+                .nc-bar-backdrop {
+                    fill: lighten($color-primary, 35%);
                 }
                 .nc-bar {
-                    shape-rendering: crispEdges;
-                    transition: fill 0.2s;
+                    fill: $color-primary;
+                }
+            }
+        }
+        .nc-bar-backdrop {
+            fill: #EEE;
+            transition: fill 0.2s;
+        }
+        .nc-bar-table-label,
+        .nc-bar-table-value {
+            font-family: $fonts-primary;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        .nc-bar-table-value {
+            font-weight: 200;
+        }
+        .nc-axis-x,
+        .nc-axis-y {
+            .tick {
+                text {
+                    font-family: $fonts-primary;
+                    font-size: 1.35em;
+                }
+            }
+        }
+        .nc-axis-label {
+            fill: #000;
+            font-family: $fonts-primary;
+            font-size: 1.3em;
+        }
+        .nc-pie-slice {
+            path {
+                shape-rendering: geometricPrecision;
+                transition: transform 0.2s, fill 0.2s;
+            }
 
-                    &.table {
-                        fill: rgba($color-brand, .25);
-                    }
-                    &.histogram {
-                        fill: $color-brand;
-                    }
-                    &:hover {
-                        fill: $color-primary;
-                    }
+            &:hover {
+                path {
+                    fill: $color-primary;
+                    transform: scale(1.03);
                 }
-                .nc-bar-group {
-                    &:hover {
-                        .nc-bar-backdrop {
-                            fill: lighten($color-primary, 35%);
-                        }
-                        .nc-bar {
-                            fill: $color-primary;
-                        }
-                    }
-                }
-                .nc-bar-backdrop {
-                    fill: $grey-vlight;
-                    transition: fill 0.2s;
-                }
-                .nc-bar-table-label,
-                .nc-bar-table-value {
-                    font-family: $fonts-primary;
-                    font-size: 1.1em;
-                    font-weight: 600;
-                }
-                .nc-bar-table-value {
-                    font-weight: 200;
-                }
-                .nc-axis-x,
-                .nc-axis-y {
-                    .tick {
-                        text {
-                            font-family: $fonts-primary;
-                            font-size: 1.35em;
-                        }
-                    }
-                }
-                .nc-axis-label {
-                    fill: #000;
-                    font-family: $fonts-primary;
-                    font-size: 1.3em;
-                }
-                .nc-pie-slice {
-                    path {
-                        shape-rendering: geometricPrecision;
-                        transition: transform 0.2s, fill 0.2s;
-                    }
+            }
+        }
+        .nc-pie-label {
+            fill: #fff;
+            font-family: $fonts-primary;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: default;
+            animation: fadein .2s;
+            text-shadow: 0 1px 2px rgba(0,0,0,.8);
 
-                    &:hover {
-                        path {
-                            fill: $color-primary;
-                            transform: scale(1.03));
-                        }
-                    }
-                }
-                .nc-pie-label {
-                    fill: #fff;
-                    font-family: $fonts-primary;
-                    font-weight: 600;
-                    font-size: 1em;
-                    cursor: default;
-                    animation: fadein .2s;
-                    text-shadow: 0 1px 2px rgba(0,0,0,.8);
-
-                    &.outside {
-                        fill: #000;
-                        font-weight: 100;
-                        font-size: 1.15em;
-                        text-shadow: none;
-                    }
-                }
-                .nc-counter-value {
-                    font-family: $fonts-primary;
-                    text-rendering: geometricPrecision;
-                    font-size: 3em;
-                    font-weight: bold;
-                    fill: $nc-blue;
-                }
-                .nc-counter-context {
-                    font-family: $fonts-primary;
-                    text-rendering: geometricPrecision;
-                    font-size: 1.3em;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    fill: #999;
-                }
-                &:hover {
-                    .nc-line {
-                        stroke: $color-primary;
-                    }
-                }
+            &.outside {
+                fill: #000;
+                font-weight: 100;
+                font-size: 1.15em;
+                text-shadow: none;
+            }
+        }
+        .nc-counter-value {
+            font-family: $fonts-primary;
+            text-rendering: geometricPrecision;
+            font-size: 3em;
+            font-weight: bold;
+            fill: $color-brand;
+        }
+        .nc-counter-context {
+            font-family: $fonts-primary;
+            text-rendering: geometricPrecision;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            font-weight: 600;
+            fill: #999;
+        }
+        &:hover {
+            .nc-line {
+                stroke: $color-primary;
             }
         }
     }
