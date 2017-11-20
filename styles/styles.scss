@@ -17,9 +17,12 @@
 
 $fonts-primary: 'Open Sans', sans-serif;
 
-$color-primary: #F18700;
-$color-brand:   #009CC1;
-$color-border:  #D0D1D5;
+$color-primary: #f18700;
+$color-brand:   #009cc1;
+$color-accent:  #182642;
+$color-border:  #d0d1d5;
+$color-black:   #000;
+$color-white:   #fff;
 
 .nc-overlay {
     position: absolute;
@@ -36,8 +39,8 @@ $color-border:  #D0D1D5;
             top: 50%;
             left: 50%;
             margin: 8px 0 0 -20px;
-            border: .25rem solid rgba(#000, .15);
-            border-top-color: rgba(#182642, 1);
+            border: .25rem solid rgba($color-black, .15);
+            border-top-color: rgba($color-accent, 1);
             height: 24px;
             width: 24px;
             animation: spin 1s infinite linear;
@@ -71,8 +74,8 @@ $color-border:  #D0D1D5;
     }
 }
 .nc-bar-tip {
-    background-color: rgba(#000, .8);
-    color: #fff;
+    background-color: rgba($color-black, .8);
+    color: $color-white;
     font-family: $fonts-primary;
     font-size: 1.1em;
     padding: 3px 10px;
@@ -93,7 +96,7 @@ $color-border:  #D0D1D5;
         position: absolute;
         pointer-events: none;
         border-color: rgba(0, 0, 0, 0);
-        border-top-color: #000;
+        border-top-color: $color-black;
         border-width: 5px;
         margin-left: -5px;
     }
@@ -157,9 +160,6 @@ $color-border:  #D0D1D5;
             font-weight: 600;
             overflow: hidden;
         }
-        .nc-tooltip-value {
-
-        }
     }
     .nc-chart-svg {
         position: absolute;
@@ -176,7 +176,7 @@ $color-border:  #D0D1D5;
                 }
             }
             .nc-legend-label {
-                fill: #000;
+                fill: $color-black;
                 font-size: 11px;
                 font-family: $fonts-primary;
             }
@@ -260,7 +260,7 @@ $color-border:  #D0D1D5;
             }
         }
         .nc-axis-label {
-            fill: #000;
+            fill: $color-black;
             font-family: $fonts-primary;
             font-size: 1.3em;
         }
@@ -278,7 +278,7 @@ $color-border:  #D0D1D5;
             }
         }
         .nc-pie-label {
-            fill: #fff;
+            fill: $color-white;
             font-family: $fonts-primary;
             font-weight: 600;
             font-size: 1em;
@@ -287,7 +287,7 @@ $color-border:  #D0D1D5;
             text-shadow: 0 1px 2px rgba(0,0,0,.8);
 
             &.outside {
-                fill: #000;
+                fill: $color-black;
                 font-weight: 100;
                 font-size: 1.15em;
                 text-shadow: none;
