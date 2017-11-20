@@ -1,0 +1,41 @@
+{
+    "name": "nice-charts",
+    "version": "1.0.0",
+    "description": "D3 Charts library for Nice!",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@tkgit-01.textkernel.net:nice/nice-charts.git"
+    },
+    "author": "Textkernel B.V.",
+    "license": "ISC",
+    "dependencies": {
+        "d3": "4.4.0",
+        "d3-time-format": "2.0.3",
+        "d3-tip": "0.7.1"
+    },
+    "devDependencies": {
+        "babel-cli": "6.24.1",
+        "babel-preset-es2015": "6.24.1",
+        "babel-preset-react": "6.24.1",
+        "babelify": "7.3.0",
+        "browser-sync": "2.18.13",
+        "browserify": "14.4.0",
+        "eslint": "4.3.0",
+        "eslint-plugin-react": "7.1.0",
+        "gulp": "3.9.1",
+        "gulp-autoprefixer": "4.0.0",
+        "gulp-babel": "6.1.2",
+        "gulp-eslint": "4.0.0",
+        "gulp-sass": "3.1.0",
+        "gulp-sourcemaps": "2.6.0",
+        "gulp-util": "3.0.8",
+        "lodash": "4.17.4",
+        "react": "15.6.1",
+        "react-dom": "15.6.1",
+        "vinyl-source-stream": "1.1.0"
+    }
+}
