@@ -13,6 +13,7 @@ $color-primary: #f18700;
 $color-brand:   #009cc1;
 $color-accent:  #182642;
 $color-border:  #d0d1d5;
+$color-text:    #1d1d1b;
 $color-black:   #000;
 $color-white:   #fff;
 
@@ -246,18 +247,18 @@ $color-white:   #fff;
             font: {
                 family: $fonts-primary;
                 weight: 600;
-                size: .6em;
+                size: .5em;
             }
 
             &.outside {
                 fill: $color-black;
-                font-weight: 100;
+                font-weight: 400;
                 text-shadow: none;
             }
         }
         .nc-counter-value {
             text-rendering: geometricPrecision;
-            fill: $color-brand;
+            fill: $color-text;
             font: {
                 family: $fonts-primary;
                 size: 3em;
