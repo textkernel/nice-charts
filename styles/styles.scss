@@ -243,9 +243,10 @@ $color-white:   #fff;
         }
         .nc-bar-table-label,
         .nc-bar-table-value {
-            font-family: $fonts-primary;
-            font-size: 1.1em;
-            font-weight: 600;
+            font: {
+                family: $fonts-primary;
+                weight: 600;
+            }
         }
         .nc-bar-table-value {
             font-weight: 200;
@@ -255,14 +256,12 @@ $color-white:   #fff;
             .tick {
                 text {
                     font-family: $fonts-primary;
-                    font-size: 1.35em;
                 }
             }
         }
         .nc-axis-label {
             fill: $color-black;
             font-family: $fonts-primary;
-            font-size: 1.3em;
         }
         .nc-pie-slice {
             path {
@@ -289,7 +288,6 @@ $color-white:   #fff;
             &.outside {
                 fill: $color-black;
                 font-weight: 100;
-                font-size: 1.15em;
                 text-shadow: none;
             }
         }
