@@ -14,5 +14,7 @@ const defaultValue = [["date__week","count"],["2016-11-21",40519],["2016-11-28",
 
 stories.add('Default', () => (
     <LineChart
-        data={ object('Data', defaultValue) } area={ true } margin={{ top: 25 }} />
+        data={ object('Data', defaultValue) }
+        area={ true }
+        margin={{ top: 25 }} />
 ));
