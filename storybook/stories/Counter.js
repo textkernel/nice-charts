@@ -6,8 +6,7 @@ import { Counter } from 'nice-charts';
 const stories = storiesOf('Counter', module);
 
 stories.addDecorator(withKnobsOptions({
-    debounce: { wait: 500 },
-    timestamps: true
+    debounce: { wait: 500 }
 }));
 
 stories.add('Default', () => (
