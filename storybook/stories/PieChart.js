@@ -14,6 +14,12 @@ const defaultValue = [["education_level","count"],[{"value":9,"label":"MBO"},143
 
 stories.add('Default', () => (
     <PieChart
+        width={ number('Width', 300) }
+        height={ number('Height', 200) }
+        margin={ object('Margins', {
+            x: 100,
+            y: 15
+        }) }
         icon={ text('Icon classnames', 'fa fa-graduation-cap') }
         innerRadius={ number('Inner radius', 0.6) }
         data={ object('Data', defaultValue) } />
