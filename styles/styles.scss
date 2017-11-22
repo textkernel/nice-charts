@@ -191,6 +191,9 @@ $color-white:   #fff;
             }
         }
         .nc-bar-group {
+            &.link {
+                cursor: pointer;
+            }
             &:hover {
                 .nc-bar-backdrop {
                     fill: lighten($color-primary, 35%);
