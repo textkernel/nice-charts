@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, object, select } from '@storybook/addon-knobs';
+import { withKnobs, object, select, number } from '@storybook/addon-knobs';
 import { LineChart } from 'nice-charts';
 
 const stories = storiesOf('LineChart', module);
@@ -23,6 +23,7 @@ const defaultData = [["date__week","count"],["2016-11-21",40519],["2016-11-28",4
 stories.add('Default', () => (
     <LineChart
         area={ true }
+        pointSize={ number('Point size', 3) }
         curveFunction={ select('Curve function', curveFunctions, 'curveCatmullRom') }
         ticks={ object('Ticks', {
             angle: -45,
