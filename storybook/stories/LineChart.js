@@ -25,7 +25,8 @@ stories.add('Default', () => (
         area={ true }
         curveFunction={ select('Curve function', curveFunctions, 'curveCatmullRom') }
         ticks={ object('Ticks', {
-            angle: -45
+            angle: -45,
+            format: '%B'
         }) }
         margin={ object('Margins', { top: 25 }) }
         data={ object('Data', defaultData) } />
