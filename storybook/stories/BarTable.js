@@ -11,7 +11,7 @@ stories.addDecorator(withKnobsOptions({
     timestamps: true
 }));
 
-const defaultValue = [
+const defaultData = [
     ["organization_name","count"],
     ["Sandd", 1815, 'https://www.sandd.nl/'],
     ["PostNL Holding B.V.",1578],
@@ -25,6 +25,51 @@ const defaultValue = [
     ["Jumbo Supermarkten",476]
 ];
 
-const notes = "You can optionally provide a URL or callback function for each entry in the list that will be executed on click";
+const alternativeModel = [
+    ["organization_name","count"],
+    [{
+        value: 11,
+        label: "Sandd"
+    }, 1815],
+    [{
+        value: 24,
+        label: "PostNL Holding B.V."
+    }, 1578],
+    [{
+        value: 64,
+        label: "PostNL"
+    }, 1389],
+    [{
+        value: 94,
+        label: "Kruidvat"
+    }, 972],
+    [{
+        value: 46,
+        label: "Albert Heijn"
+    }, 738],
+    [{
+        value: 75,
+        label: "JobBoost"
+    }, 664],
+    [{
+        value: 34,
+        label: "Deloitte"
+    }, 595],
+    [{
+        value: 27,
+        label: "LIDL Nederland"
+    }, 495],
+    [{
+        value: 49,
+        label: "Rabobank"
+    }, 494],
+    [{
+        value: 74,
+        label: "Jumbo Supermarkten"
+    }, 476]
+];
 
-stories.add('Default', withNotes(notes)(() => <BarTable data={ object('Data', defaultValue) } />));
+const notes = "You can optionally provide a URL or callback function for each entry in the list that will be executed on click.\nThe first list element for each row (the label to be shown) can be either a string or an object with keys 'value' and 'label'.";
+
+stories.add('Default', withNotes(notes)(() => <BarTable data={ object('Data', defaultData) } />));
+stories.add('Alternative data model', () => (<BarTable data={ object('Data', alternativeModel) } />));
