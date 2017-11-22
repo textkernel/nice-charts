@@ -6,7 +6,7 @@ import { BarTable } from 'nice-charts';
 const stories = storiesOf('BarTable', module);
 
 stories.addDecorator(withKnobsOptions({
-    debounce: { wait: 500 },
+    debounce: { wait: 100 },
     timestamps: true
 }));
 

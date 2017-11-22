@@ -6,7 +6,7 @@ import { Histogram } from 'nice-charts';
 const stories = storiesOf('Histogram', module);
 
 stories.addDecorator(withKnobsOptions({
-    debounce: { wait: 500 },
+    debounce: { wait: 100 },
     timestamps: true
 }));
 
