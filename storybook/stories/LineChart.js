@@ -29,8 +29,7 @@ stories.add('Default', () => (
         dateTimeFormat={ text('Custom date / time format', '') }
         curveFunction={ select('Curve function', curveFunctions, 'curveCatmullRom') }
         ticks={ object('Ticks', {
-            angle: -45,
-            format: '%B'
+            angle: -45
         }) }
         margin={ object('Margins', { top: 25 }) }
         data={ object('Data', defaultData) } />
