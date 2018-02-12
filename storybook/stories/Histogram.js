@@ -18,12 +18,14 @@ stories.add('Default', () => (
             ticks: { 
                 prefix: '€',
                 angle: -45,
-                specifier: '.2s'
+                specifier: '.2s',
+                fontSize: '1em'
             }
         }) }
         yAxis={ object('Y Axis', {
             ticks: {
-                specifier: 's'
+                specifier: 's',
+                fontSize: '1em'
             }
         })}
         margin={ object('Margins', {
