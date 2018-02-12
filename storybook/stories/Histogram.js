@@ -24,7 +24,8 @@ stories.add('Default', () => (
         }) }
         yAxis={ object('Y Axis', {
             ticks: {
-                specifier: 's',
+                prefix: '',
+                specifier: '.2s',
                 fontSize: '1em'
             }
         })}
