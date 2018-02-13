@@ -14,8 +14,10 @@ const defaultValue = [["salary__buckets_15000_100000_5000","count"],["Java", 137
 
 stories.add('Default', () => (
     <BarChart
-        ticks={ object('Ticks', {
-            angle: -45 
+        xAxis={ object('X Axis', {
+            ticks: {
+                angle: -45
+            }
         }) }
         margin={ object('Margins', {
             left: 75,

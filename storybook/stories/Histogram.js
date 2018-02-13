@@ -14,10 +14,21 @@ const defaultValue = [["salary__buckets_15000_100000_5000","count"],[15000,18723
 
 stories.add('Default', () => (
     <Histogram
-        ticks={ object('Ticks', { 
-            prefix: '€',
-            angle: -45 
+        xAxis={ object('X Axis', {
+            ticks: { 
+                prefix: '€',
+                angle: -45,
+                specifier: '.2s',
+                fontSize: '1em'
+            }
         }) }
+        yAxis={ object('Y Axis', {
+            ticks: {
+                prefix: '',
+                specifier: '.2s',
+                fontSize: '1em'
+            }
+        })}
         margin={ object('Margins', {
             left: 75,
             top: 25
