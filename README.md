@@ -88,7 +88,7 @@ Prop|Type|Default
 |:----|:----|:----
 data|array|n/a
 area|boolean|false
-curveFunction|string|curveCatmullRom
+curveFunction|string|curveCatmullRom (see [curve types](https://github.com/d3/d3-shape#curves))
 margin.top|number|0
 margin.right|number|0
 margin.bottom|number|50
