@@ -4,10 +4,13 @@ Nice! Charts is a collection of D3 charts in the form of React components.
 
 ## Usage
 1. Import the desired chart component from the library
+
 ```js
 import Histogram from 'nice-charts'
 ```
+
 2. Include the chart in your page
+
 ```jsx
 <Histogram data={[ ... ]} />
 ```
