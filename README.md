@@ -15,6 +15,9 @@ import Histogram from 'nice-charts'
 <Histogram data={[ ... ]} />
 ```
 
+## Examples
+Run `npm run storybook` and point your browser to `http://localhost:9100` to see examples of all charts in the library.
+
 ## Charts
 The following charts are available in this library
 
