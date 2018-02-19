@@ -95,13 +95,13 @@ height|number|`300`
 
 ### LineChart
 
-The `data`-prop expects a matrix in which the items in the first row define the chart columns (axis X and Y respectively, e.g. `date` and `count`). If necessary you can define a custom date / time input format using the `dateTimeFormat` prop. Use the same directives as for [`locale.format`](https://github.com/d3/d3-time-format#locale_format).
+The `data`-prop expects a matrix in which the items in the first row define the chart columns (axis X and Y respectively, e.g. `date` and `count`). If necessary you can define a custom date / time input format using the `dateTimeFormat` prop. It uses the same directives as [`locale.format`](https://github.com/d3/d3-time-format#locale_format).
 
 Prop|Type|Default
 |:----|:----|:----
 data|array|n/a
 area|boolean|`false`
-curveFunction|string|curveCatmullRom (see [curve types](https://github.com/d3/d3-shape#curves))
+curveFunction|string|`curveCatmullRom` (see [curve types](https://github.com/d3/d3-shape#curves))
 margin.top|number|`0`
 margin.right|number|`0`
 margin.bottom|number|`50`
